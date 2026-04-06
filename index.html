@@ -206,6 +206,60 @@ footer {
 .footer-emails { display: flex; flex-direction: column; gap: 8px; }
 .footer-email { font-size: 8.5px; letter-spacing: 0.3px; color: #888; text-decoration: none; }
 .footer-right { text-align: right; font-size: 7px; letter-spacing: 2px; text-transform: uppercase; color: #555; line-height: 2.4; }
+
+/* ═══ MOBILE ═══ */
+@media (max-width: 768px) {
+  html { overflow-x: hidden; }
+
+  /* Nav */
+  nav { padding: 16px 24px; }
+  .nav-links { display: none; }
+
+  /* Hero */
+  .hero { padding: 40px 24px 32px; }
+  .hero-wordmark { letter-spacing: -3px; }
+
+  /* Sections — stack all 2-col grids */
+  .casero, .science, .community, .everyone-top, .work-header {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 64px 24px;
+  }
+  .everyone { padding: 64px 24px; }
+
+  /* Work grid — stack 3 columns */
+  .work { padding: 64px 24px; }
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+  .work-card {
+    border-right: none;
+    border-bottom: 1px solid #222;
+    padding: 28px 0;
+  }
+  .work-card:last-child { padding-left: 0; border-bottom: none; }
+  .work-card:nth-child(2) { padding-left: 0; }
+
+  /* Flavour belt — smaller text */
+  .fname { font-size: clamp(28px, 8vw, 48px); padding: 0 28px 0 24px; }
+
+  /* Email capture */
+  .email-capture { padding: 64px 24px; }
+  .email-form { flex-direction: column; }
+  .email-form input { border-right: 1.5px solid rgba(228,221,214,0.3); border-bottom: none; }
+
+  /* Community form */
+  .community-form .form-row { flex-direction: column; }
+  .community-form .form-row input { border-right: 1.5px solid rgba(228,221,214,0.25); border-bottom: none; }
+
+  /* Footer */
+  footer { padding: 40px 24px 0; }
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .footer-right { text-align: left; }
+}
 </style>
 </head>
 <body>
